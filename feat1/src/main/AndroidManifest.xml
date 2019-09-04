@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dogmaticcentral.feat1">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_feat1"
+        dist:onDemand="true">
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application
+        android:hasCode="false"
+        tools:ignore="GoogleAppIndexingWarning">
+    </application>
+
+</manifest>
+

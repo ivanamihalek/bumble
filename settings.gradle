@@ -1,0 +1,2 @@
+include ':app', ':feat1', ':feat2'
+rootProject.name='Bumble'

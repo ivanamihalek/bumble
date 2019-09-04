@@ -1,0 +1,47 @@
+apply plugin: 'com.android.dynamic-feature'
+
+android {
+    compileSdkVersion 28
+    
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+
+    flavorDimensions "size"
+    productFlavors {
+        small {
+            // Assigns this product flavor to the "version" flavor dimension.
+            // If you are using only one dimension, this property is optional,
+            // and the plugin automatically assigns all the module's flavors to
+            // that dimension.
+            dimension "size"
+            applicationIdSuffix ".small"
+            versionNameSuffix "-small"
+        }
+
+        full {
+            dimension "size"
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+        }
+
+        local {
+            dimension "size"
+            applicationIdSuffix ".local"
+            versionNameSuffix "-local"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+}

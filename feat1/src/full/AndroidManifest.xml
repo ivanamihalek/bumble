@@ -1,0 +1,35 @@
+<!--
+onDemand — If the property is set to true then the module will be available for on-demand downloads.
+When set to false the dynamic feature will be downloaded
+when the user first downloads and installs the application.
+
+title — The title will be used to identify the module when users are confirming the download of the module.
+The string resources for this should be stored in the resources of your application
+so that it can be translatable for the different locales that your application supports.
+
+fusing include — Setting this property to true will mean that older devices (4.4 and lower)
+will be able to receive these dynamic features in the form of multi-APKs.
+To use this functionality you must have enabled the onDemand property.
+
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dogmaticcentral.feat1"
+    >
+
+    <dist:module
+        dist:onDemand="true"
+        dist:instant="false"
+        dist:title="@string/title_feat1"
+           >
+    </dist:module>
+
+    <application
+        android:hasCode="false"
+
+        tools:ignore="GoogleAppIndexingWarning">
+    </application>
+
+</manifest>
+
